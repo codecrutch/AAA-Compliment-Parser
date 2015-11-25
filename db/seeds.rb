@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+45.times do |val|
+  Compliment.create(date: Date.today.to_s, call_number: val, driver: "Sean Snyder")
+end

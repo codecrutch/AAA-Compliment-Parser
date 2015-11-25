@@ -1,0 +1,57 @@
+<div class="container">
+  
+  <div class="row">
+    <div class="col-xs-12 center-block no-print">
+      <div id="title"><%= image_tag "https://calstate.aaa.com/sites/all/themes/custom/aaa_responsive/img/logo.svg", size: "190x190" %>
+        AAA Compliments
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-xs-12 pull-left no-print">
+      <div id="compliment-totals">
+        <h2>Total Compliments: <%= @compliments.length %></h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <% @compliments.each do |c| %>
+      <div id="<%= c.id %>" class="col-xs-5 col-lg-6 col-md-6" >
+        <div class="row compliment">
+          
+          <div class="col-xs-12">
+            <p>
+              <%= image_tag "https://calstate.aaa.com/sites/all/themes/custom/aaa_responsive/img/logo.svg", size: "120x120" %>
+              <span style="font-size: 35px;"> Compliment </span>
+            </p>
+          </div>
+          
+          <div class="col-xs-6">
+            <h3><span class="bold">Call# </span><%= c.call_number %></h3>
+          </div>
+          <div class="col-xs-6">
+             <h3><span class="bold">Date: </span><%= c.date %></h3>
+             
+           </div>
+          
+          <div class="col-xs-12">
+            <p>
+              <h3><span class="bold">Driver: </span>&nbsp&nbsp<%= c.driver %></h3>
+            </p>
+          </div>
+          
+          <div class="col-xs-12">
+            <p>
+              <h3><span class="bold">Supervisor: </span><span class="line"></span></h3>
+            </p>
+          </div>
+          
+          </div>
+      </div>
+      <!-- pagebreak -->
+    <% end %>
+  </div>
+  
+</div>

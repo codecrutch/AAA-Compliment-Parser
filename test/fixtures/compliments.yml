@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  call_number: 1
+  driver: MyString
+  date: MyString
+
+two:
+  call_number: 1
+  driver: MyString
+  date: MyString

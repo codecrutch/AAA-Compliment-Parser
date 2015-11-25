@@ -1,0 +1,46 @@
+// Place all the styles related to the Compliments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+div {
+  font-family: 'Cinzel', serif;
+}
+
+.compliment {
+  height: 450px;
+  width: 575px;
+  border: solid;
+  border-color: blue;
+  padding: 50px 50px 50px 50px;
+  margin-bottom: 10px;
+}
+
+#title {
+  font-size: 35px;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+#compliment-totals {
+
+}
+
+.line {
+    margin: 20px 10px;
+    border-bottom: 1px solid black;
+    width: 200px; 
+    text-align: center;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+@media print { 
+  .no-print {
+    display: none !important;
+  }
+  .breakhere {
+    page-break-before: always !important;
+  }
+}
