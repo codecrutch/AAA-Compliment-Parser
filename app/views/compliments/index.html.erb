@@ -1,7 +1,6 @@
-<div class="container">
-  
-  <div class="row">
-    <div class="col-xs-12 center-block no-print">
+<div class="container">  
+  <div class="row no-print">
+    <div class="col-sm-12 center-block">
       <div id="title"><%= image_tag "https://calstate.aaa.com/sites/all/themes/custom/aaa_responsive/img/logo.svg", size: "190x190" %>
         AAA Compliments
       </div>
@@ -9,7 +8,7 @@
   </div>
   
   <div class="row">
-    <div class="col-xs-12 pull-left no-print">
+    <div class="col-sm-push-2 no-print">
       <div id="compliment-totals">
         <h2>Total Compliments: <%= @compliments.length %></h2>
       </div>
@@ -18,39 +17,55 @@
 
   <div class="row">
     <% @compliments.each do |c| %>
-      <div id="<%= c.id %>" class="col-xs-5 col-lg-6 col-md-6" >
+      <div id="<%= c.id %>" class="col-sm-6 page-break" >
         <div class="row compliment">
           
-          <div class="col-xs-12">
+          <div class="col-sm-12">
             <p>
-              <%= image_tag "https://calstate.aaa.com/sites/all/themes/custom/aaa_responsive/img/logo.svg", size: "120x120" %>
-              <span style="font-size: 35px;"> Compliment </span>
+              <%= image_tag "https://calstate.aaa.com/sites/all/themes/custom/aaa_responsive/img/logo.svg", size: "80x80" %>
+              <span style="font-size: 15px;"> Compliment </span>
             </p>
           </div>
           
-          <div class="col-xs-6">
-            <h3><span class="bold">Call# </span><%= c.call_number %></h3>
+          <div class="col-sm-6">
+            <h4><span class="bold">Call# </span><%= c.call_number %></h4>
           </div>
-          <div class="col-xs-6">
-             <h3><span class="bold">Date: </span><%= c.date %></h3>
+          <div class="col-sm-6">
+             <h4><span class="bold">Date: </span><%= c.date %></h4>
              
-           </div>
+           </div> 
           
-          <div class="col-xs-12">
+          <div class="col-sm-12">
             <p>
-              <h3><span class="bold">Driver: </span>&nbsp&nbsp<%= c.driver %></h3>
+              <h4><span class="bold">Driver: </span>&nbsp&nbsp<%= c.driver %></h4>
+            </p>
+          </br>
+          </div>
+          
+          <div class="col-sm-pull-10">
+            <p>
+              <h4>
+                <span class="bold line">&nbsp&nbsp&nbsp&nbsp-----------------------------------</span>
+              </h4>
             </p>
           </div>
           
-          <div class="col-xs-12">
+          <div class="col-sm-pull-10">
             <p>
-              <h3><span class="bold">Supervisor: </span><span class="line"></span></h3>
+              <h4>
+                <span class="bold">&nbsp&nbsp&nbspSupervisor </span>
+              </h4>
+            </p>
+          </div>
+          
+          <div class="col-sm-push-12">
+            <p>
+              <h4><span class="bold">&nbsp&nbsp&nbspGreat Job! Thank you! </span><span class="line"></span></h4>
             </p>
           </div>
           
           </div>
       </div>
-      <!-- pagebreak -->
     <% end %>
   </div>
   
