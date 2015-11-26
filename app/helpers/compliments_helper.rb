@@ -3,7 +3,7 @@ module ComplimentsHelper
     compliments = data.split("\n")
     arr = []
     compliments.each do |d|
-      d.match(/([0-9]+[\/][0-9]+[\/][0-9]{2})\t([0-9]+)\t([^*]+)/)
+      d.match(/([0-9]+[\/][0-9]+[\/][0-9]{2})\t+([0-9]+)\t+([^*]+)/)
       arr.push([$1,$2,$3])
       if $3.present?
         if $3.include?(", ")
