@@ -2,18 +2,23 @@
   <div class="row no-print">
     <div class="col-sm-12 center-block">
       <div id="title"><%= image_tag "https://calstate.aaa.com/sites/all/themes/custom/aaa_responsive/img/logo.svg", size: "190x190" %>
-        AAA Compliments
+        AAA Northeast Compliments
       </div>
     </div>
   </div>
   
   <div class="row">
-    <div class="col-sm-push-2 no-print">
+    <div class="col-sm-4 no-print">
       <div id="compliment-totals">
         <h2>Total Compliments: <%= @compliments.length %></h2>
-        <p><%= link_to "Start Over", root_path %></p>
       </div>
     </div>
+    
+    <div class="col-sm-5 no-print">
+        <h2><%= link_to "Start Over", root_path, class: "btn btn-primary" %> &nbsp&nbsp<%= button_tag "Print", onClick: "window.print();", class: "btn btn-info" %></h2>
+    </div> 
+    
+    <div class="col-sm-12 no-print"><hr></div>
   </div>
 
   <div class="row">

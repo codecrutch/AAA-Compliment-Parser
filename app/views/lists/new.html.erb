@@ -2,7 +2,13 @@
   <%= form_for (@list) do |f| %>
   <div class="row">
     <div class="col-sm-2"></div>
-    <div class="col-sm-7"><h1>Terry's Compliment-O-Matic</h1></div>
+    <div class="col-sm-9"><h1 class="bold" style="font-size: 70px; color: #3366ff;">Terry Novello's</h1></div>
+    <div class="col-sm-3"></div>
+  </div>
+  
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-9"><h1 class="bold" style="font-size: 50px; color: #a281e4;">&nbsp&nbspCompliment-O-Matic</h1></div>
     <div class="col-sm-3"></div>
   </div>
 
@@ -14,10 +20,31 @@
 
   <div class="row">
     <div class="col-sm-4"></div>
-    <div class="col-sm-4"><h1><%= f.submit %></h1></div>
+    <div class="col-sm-4"><h1><%= f.submit "Turn the Wheel Theresa", class: "btn btn-success btn-lg" %></h1></div>
     <div class="col-sm-4"></div>
   </div>
 
   </div>
   <% end %>
+  
+  <div class="row well">
+    <div class="col-sm-2"><h2>Formats:</h2></div>
+    <div class="col-sm-6"><h1 class="bold">Date - Call# - Driver</h1>
+                                              <h4><p>"1/01/16 12345 John Doe"
+                                              <p>"1/01/16 12345 Doe,John"
+                                              <p>"1/01/16 12345 Doe, John"
+                                              </h4></div>
+    <div class="col-sm-4"></div>
+  </div>
+  
+  <div class="row well">
+    <div class="col-sm-2"><h2>Restrictions:</h2></div>
+    <div class="col-sm-6"><h1 class="bold">Call#'s Must be Unique</h1>
+                                              <h3><p>Only one driver can get a compliment on a call
+                                              <p>ex. John Doe gets Compliment on Call# 4
+                                              <p>Jane Doe will be ignored if given a compliment on Call #4
+                                              </h3></div>
+    <div class="col-sm-4"></div>
+  </div>
+  
 </div>
