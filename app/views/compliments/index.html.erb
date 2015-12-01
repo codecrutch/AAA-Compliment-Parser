@@ -24,7 +24,7 @@
 
   <div class="row">
     <% @compliments.each do |c| %>
-      <div id="<%= c.id %>" class="col-sm-6 page-break" >
+      <div id="<%= c.call_number %>" class="col-xs-6 page-break" >
         <div class="row compliment">
           
           <div class="col-sm-12">
@@ -78,14 +78,14 @@
   
 </div>
 <% elsif user_signed_in? %>
-  <div class="container">
-    <div class="row center">
+  <div class="container no-print">
+    <div class="row center no-print">
    <h1> You must be an admin to use this program. Please contact management.</h1>
   </div>
 </div>
 
 <% else %>
- <div class="container">
+ <div class="container no-print">
   <div class="row center">
  <h1> You must login to view or access any features. </h1>
 </div>
