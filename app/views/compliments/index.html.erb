@@ -1,15 +1,16 @@
+<% if user_signed_in? && current_user.admin? %>
 <div class="container">  
   <div class="row no-print">
     <div class="col-sm-12 center-block">
-      <div id="title"><%= image_tag "https://calstate.aaa.com/sites/all/themes/custom/aaa_responsive/img/logo.svg", size: "190x190" %>
-        AAA Northeast Compliments
+      <div class="title"><%= image_tag "http://giving.lifespan.org/image/logos/AAANELOGO_rgb.jpg", size: "390x190" %>
+        Driver Compliments
       </div>
     </div>
   </div>
   
   <div class="row">
     <div class="col-sm-4 no-print">
-      <div id="compliment-totals">
+      <div id="compliment-totals" class="title">
         <h2>Total Compliments: <%= @compliments.length %></h2>
       </div>
     </div>
@@ -28,8 +29,8 @@
           
           <div class="col-sm-12">
             <p>
-              <%= image_tag "https://calstate.aaa.com/sites/all/themes/custom/aaa_responsive/img/logo.svg", size: "80x80" %>
-              <span style="font-size: 15px;"> Compliment </span>
+              <%= image_tag "http://giving.lifespan.org/image/logos/AAANELOGO_rgb.jpg", size: "140x80" %>
+              <span style="font-size: 20px;">Compliment</span>
             </p>
           </div>
           
@@ -76,3 +77,17 @@
   </div>
   
 </div>
+<% elsif user_signed_in? %>
+  <div class="container">
+    <div class="row center">
+   <h1> You must be an admin to use this program. Please contact management.</h1>
+  </div>
+</div>
+
+<% else %>
+ <div class="container">
+  <div class="row center">
+ <h1> You must login to view or access any features. </h1>
+</div>
+</div>
+<% end %>

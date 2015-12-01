@@ -13,10 +13,14 @@ div {
   margin-bottom: 10px;
 }
 
-#title {
-  font-size: 35px;
-  text-decoration: underline;
+.title {
+  font-size: 55px;
   font-weight: bold;
+  font-family: 'Indie Flower';
+}
+
+.large {
+  font-size: 65px;
 }
 
 #compliment-totals {
@@ -33,6 +37,23 @@ div {
 .page-break {
   page-break-before: always;
  }
+
+.center {
+  width: 100%;
+  text-align: center;
+}
+#devise {
+  display: inline-block;
+  text-align:left;
+  margin:0 auto;
+  input {
+    font-family: Aerial, Serif;
+  }
+}
+
+.zoom {
+  zoom: 2;
+}
 
 @media print{@page {size: landscape}}
 @media print {
@@ -231,3 +252,17 @@ div {
     display: none;
   }
 }
+
+.footer {
+  bottom: 0;
+  width: 100%;
+  padding: 40px 30px 30px 30px;
+  #created {
+    color: black;
+    #heart {
+      color: red;
+    }
+
+  }
+}
+
