@@ -7,8 +7,7 @@ class ListsController < ApplicationController
   end
   
   def new
-    List.delete_all
-    Compliment.delete_all
+    clear_database
     @list = List.new
   end
   
@@ -19,6 +18,7 @@ class ListsController < ApplicationController
   end
   
   def create
+    clear_database
     @list = List.new(list_params)
     
     respond_to do |format|
@@ -41,5 +41,10 @@ class ListsController < ApplicationController
   
   def list_params
     params.require(:list).permit(:info)
+  end
+
+  def clear_database
+    List.delete_all
+    Compliment.delete_all
   end
 end
