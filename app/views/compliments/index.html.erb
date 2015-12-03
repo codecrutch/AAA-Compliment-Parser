@@ -24,7 +24,7 @@
 
   <div class="row">
     <% @compliments.each do |c| %>
-      <div id="<%= c.call_number %>" class="col-xs-6" >
+      <div id="call-<%= c.call_number %>" class="col-xs-6" >
         <div class="row compliment">
           
           <div class="col-sm-12">
@@ -45,6 +45,7 @@
           <div class="col-sm-12">
             <p>
               <h4><span class="bold">Driver: </span>&nbsp&nbsp<%= c.driver %></h4>
+            </br>
             </p>
           </div>
           
