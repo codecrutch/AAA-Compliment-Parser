@@ -24,7 +24,7 @@
 
   <div class="row">
     <% @compliments.each do |c| %>
-      <div id="<%= c.call_number %>" class="col-xs-6 page-break" >
+      <div id="<%= c.call_number %>" class="col-xs-6" >
         <div class="row compliment">
           
           <div class="col-sm-12">
@@ -46,10 +46,9 @@
             <p>
               <h4><span class="bold">Driver: </span>&nbsp&nbsp<%= c.driver %></h4>
             </p>
-          </br>
           </div>
           
-          <div class="col-sm-pull-10">
+          <div class="col-sm-10">
             <p>
               <h4>
                 <span class="bold line">&nbsp&nbsp&nbsp&nbsp-----------------------------------</span>
@@ -57,7 +56,7 @@
             </p>
           </div>
           
-          <div class="col-sm-pull-10">
+          <div class="col-sm-10">
             <p>
               <h4>
                 <span class="bold">&nbsp&nbsp&nbspSupervisor </span>
@@ -65,7 +64,7 @@
             </p>
           </div>
           
-          <div class="col-sm-push-12">
+          <div class="col-sm-12">
             <p>
               <h4><span class="bold">&nbsp&nbsp&nbspGreat Job! Thank you! </span><span class="line"></span></h4>
             </p>

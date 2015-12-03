@@ -7,20 +7,25 @@ div {
 }
 
 .compliment {
-  height: 325px;
+  height: 324.73px;
   //border: solid;
-  padding: 0px 0px 0px 0px;
-  margin-bottom: 10px;
+  margin: 0px;
 }
 
 #compliments-number {
   font-family: 'Cinzel', serif;
 }
 
+.compliment-selected {
+  border: solid;
+  border-size: 1px;
+  border-color: #357ebd;
+}
+
 .title {
   font-size: 55px;
   font-weight: bold;
-  font-family: 'Indie Flower';
+  font-family: 'Indie Flower', serif;
 }
 
 .large {
@@ -35,10 +40,6 @@ div {
   font-weight: bold;
 }
 
-.page-break {
-  page-break-before: always;
- }
-
 .center {
   width: 100%;
   text-align: center;
@@ -51,13 +52,20 @@ div {
     font-family: Aerial, Serif;
   }
 }
+ .page-break {
+    page-break-after: always;
+  }
+
 
 @media print{
   @page {
-    size: A4 landscape;
+    size: landscape;
   }  
   .no-print {
     display: none;
+  }
+  .page-break {
+    page-break-after: always;
   }
 }
 
