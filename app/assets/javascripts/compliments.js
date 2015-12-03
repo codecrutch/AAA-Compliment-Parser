@@ -13,4 +13,12 @@ $(document).ready(function() {
 
 		$(this).removeClass("compliment-selected");
 	})
+
+	$("#wheel").hover(function() {
+		$(this).addClass("spin-wheel");
+	}, function() {
+		$(this).removeClass("spin-wheel");
+	})
+
+
 });
