@@ -2,14 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
 div {
   font-family: 'Cinzel', serif;
 }
 
 .compliment {
-  height: 350px;
-  //border: solid;
-  margin: 0px;
+  height: 347px;
 }
 
 #compliments-number {
@@ -63,18 +66,22 @@ div {
 }
  .page-break {
     page-break-after: always;
+    break-after: always;
   }
 
 
 @media print{
   @page {
     size: landscape;
-  }  
+  }
   .no-print {
     display: none;
   }
+
+
   .page-break {
     page-break-after: always;
+    break-after: always;
   }
 }
 
